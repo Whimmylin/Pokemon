@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>one</title>
+    <style type="text/css">
+        body{
+            background-image: url("bg.JPG");
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        p{
+            position:absolute;
+	        left:510px;
+	        top:290px;
+            padding: 15px 30px;
+            background-color:red;
+            font-size: 28px;
+            font-family: Hei;
+        }
+        .button1 {
+            background-color:darkred;
+            border: none;
+            color:white;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            position:absolute;
+            left: 300px;
+	        top:640px;
+        }
+         .button2 {
+            background-color:darkred;
+            border: none;
+            color:white;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            position:absolute;
+            left: 760px;
+	        top:640px;
+        }
+        textarea{
+            padding: 10px 16px;
+            color: white;
+        }
+        .posleft{
+            position:absolute;
+	        left:370px;
+	        top:320px;
+        }
+        .posright{
+            position:absolute;
+	        left:825px;
+	        top:320px;
+        }
+
+    </style>
+
+
+    <script>
+    function getCouplet() {
+        document.getElementById("couplet").innerHTML="神奇宝贝队";
+    }
+     function Clear() {
+        window.location.reload();
+    }
+</script>
+</head>
+<body>
+
+<p>神奇对联宝贝对</p>
+<textarea id="mycouplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posleft" ></textarea>
+
+
+<button type="button" onclick="getCouplet()" class="button1">生 成 下 联</button>
+<button type="button" onclick="Clear()" class="button2">清 除 数 据</button>
+
+<textarea id="couplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posright">
+
+</textarea>
+
+
+
+</body>
+
+</html>
