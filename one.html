@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>one</title>
+    <style type="text/css">
+        body{
+            background-image: url("bg.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        p{
+            position:absolute;
+	        left:510px;
+	        top:290px;
+            padding: 15px 30px;
+            background-color:red;
+            font-size: 28px;
+            font-family: Hei;
+        }
+        .button1 {
+            background-color:darkred;
+            border: none;
+            color:white;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            position:absolute;
+            left: 300px;
+	        top:640px;
+        }
+         .button2 {
+            background-color:darkred;
+            border: none;
+            color:white;
+            padding: 20px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            position:absolute;
+            left: 760px;
+	        top:640px;
+        }
+        textarea{
+            padding: 10px 16px;
+            color: white;
+        }
+        .posleft{
+            position:absolute;
+	        left:370px;
+	        top:320px;
+        }
+        .posright{
+            position:absolute;
+	        left:825px;
+	        top:320px;
+        }
+
+    </style>
+
+
+    <script>
+    function getCouplet() {
+        document.getElementById("mycouplet").innerHTML = "a";
+        document.getElementById("couplet").innerHTML = "a";
+    }
+     function Clear() {
+        window.location.reload();
+    }
+</script>
+</head>
+<body>
+
+<p>神奇对联宝贝对</p>
+<textarea id="couplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posright">
+    {{output}}
+</textarea>
+<form action="http://localhost:5000/test" method="post">
+    <textarea id="mycouplet" name="mycouplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posleft" >{{user}}</textarea>
+    <input type="submit" value="submit" onclick="getCouplet()" class="button1">
+</form>
+<button type="button" onclick="getCouplet()" >生 成 下 联</button>
+<button type="button" onclick="Clear()" >清 除 数 据</button>
+
+
+
+
+</body>
+</html>
