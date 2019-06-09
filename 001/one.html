@@ -5,7 +5,7 @@
     <title>one</title>
     <style type="text/css">
         body{
-            background-image: url("bg.JPG");
+            background-image: url("../static/bg.JPG");
             background-repeat:no-repeat;
             background-size: cover;
         }
@@ -63,28 +63,30 @@
 
 
     <script>
-    function getCouplet() {
-        document.getElementById("couplet").innerHTML="神奇宝贝队";
-    }
+
      function Clear() {
-        window.location.reload();
+        document.getElementById("mycouplet").innerHTML = "";
+        document.getElementById("couplet").innerHTML = "";
     }
 </script>
 </head>
 <body>
 
 <p>神奇对联宝贝对</p>
-<textarea id="mycouplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posleft" ></textarea>
 
-
-<button type="button" onclick="getCouplet()" class="button1">生 成 下 联</button>
-<button type="button" onclick="Clear()" class="button2">清 除 数 据</button>
 
 <textarea id="couplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posright">
-
+{{output}}
 </textarea>
 
+<form action="http://localhost:5000/test" method="post">
+<textarea id="mycouplet" name="mycouplet" style="width:35px;height:300px;font-size:22px;background-color:grey;" maxlength="10" class="posleft">
+{{user}}
+</textarea>
+      <input type="submit" value="生 成 下 联" class="button1">
+        <input type="button" onclick="Clear()" class="button2" value="清 除 数 据">
 
+</form>
 
 </body>
 
